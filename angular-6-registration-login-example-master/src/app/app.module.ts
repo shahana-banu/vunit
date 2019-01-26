@@ -6,7 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatButtonModule, MatCheckboxModule,MatCardModule,MatIconModule} from '@angular/material';
-
+import {MatExpansionModule} from '@angular/material/expansion'; 
+import { WavesModule, ButtonsModule, IconsModule } from 'angular-bootstrap-md'
 import { AppComponent }  from './app.component';
 import { routing }        from './app.routing';
 
@@ -18,8 +19,13 @@ import { HomeComponent } from './home';
 import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
 import { CreateComponent } from './create';
+import { FooterComponent } from './footer';
+import { SubmitComponent } from './submit';
+import { DashboardComponent } from './dashboard';
 import { EventsComponent } from './events';
+import { RequestsComponent } from './requests';
 import { NavbarComponent } from './navbar';
+import { ParticlesModule } from 'angular-particle';
 
 @NgModule({
     imports: [
@@ -28,8 +34,10 @@ import { NavbarComponent } from './navbar';
         HttpClientModule,
         routing,
         FlexLayoutModule,
-        MatButtonModule, MatCheckboxModule,MatCardModule,MatIconModule,
+        MatButtonModule, MatCheckboxModule,MatCardModule,MatIconModule,WavesModule, ButtonsModule, IconsModule,
+        MatExpansionModule,
         BrowserAnimationsModule,
+        ParticlesModule,
         MDBBootstrapModule.forRoot()
     ],
     declarations: [
@@ -40,7 +48,11 @@ import { NavbarComponent } from './navbar';
         RegisterComponent,
         CreateComponent,
         NavbarComponent,
-        EventsComponent
+        EventsComponent,
+        FooterComponent,
+        RequestsComponent,
+        SubmitComponent,
+        DashboardComponent
     ],
     schemas: [ NO_ERRORS_SCHEMA ],
     providers: [

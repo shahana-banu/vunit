@@ -7,11 +7,12 @@ import { UserService } from '../_services';
 import { Event } from '../_models';
 import { EventService } from '../_services';
 
-@Component({templateUrl: 'events.component.html'})
+@Component({templateUrl: 'events.component.html',  selector: 'events',styleUrls:['events.component.css']})
 export class EventsComponent implements OnInit {
     currentUser: User;
     users: User[] = [];
     events: Event[] = [];
+    show = 5;
 
     constructor(private userService: UserService,private eventService: EventService) {
         this.currentUser = JSON.parse(localStorage.getItem('currentUser'));

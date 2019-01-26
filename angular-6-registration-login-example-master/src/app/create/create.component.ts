@@ -24,8 +24,7 @@ export class CreateComponent implements OnInit {
             host: ['', Validators.required],
             venue: ['', Validators.required],
             description: ['', Validators.required],
-            date: ['', [Validators.required]],
-            file: [null, Validators.required]
+            date: ['', [Validators.required]]
         });
     }
 

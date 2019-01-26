@@ -1,4 +1,5 @@
-﻿<mdb-navbar SideClass="navbar navbar-expand-lg navbar">
+﻿<div class="navContainer">
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar">
     <mdb-navbar-brand>
         <a class="navbar-brand" href="#">V-Unit</a>
     </mdb-navbar-brand>
@@ -12,9 +13,13 @@
                     <a class="nav-link"[routerLink]="['/create']">Create Event</a>
                 </li>
                 <li class="nav-item">
+                        <a class="nav-link"[routerLink]="['/submit']">Submit Request</a>
+                    </li>
+                <li class="nav-item">
                     <a class="nav-link" [routerLink]="['/login']">Sign Out</a>
                 </li>
             </ul>
         </div>
     </links>
 </mdb-navbar>
+</div>
