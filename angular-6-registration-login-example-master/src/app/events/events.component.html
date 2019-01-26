@@ -1,0 +1,16 @@
+﻿<h1>Hi {{currentUser.firstName}}!</h1>
+<h3>All Events:</h3>
+<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
+    <mat-card class="card" *ngFor="let event of events">
+      <mat-card-title fxLayout.gt-xs="row">
+        <span>{{event.eventname}}</span>
+      </mat-card-title>
+      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+      <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+    </mat-card>
+  </div>
+<p><a [routerLink]="['/create']">Create</a></p>
+<p><a [routerLink]="['/login']">Logout</a></p>

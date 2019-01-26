@@ -1,0 +1,21 @@
+﻿<h1>Hi {{currentUser.firstName}}!</h1>
+<h3>All Events:</h3>
+<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
+    <mat-card class="card" *ngFor="let event of events">
+      
+      <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{event.eventname}}</mat-card-title>
+          <mat-card-subtitle>{{event.host}}</mat-card-subtitle>
+        </mat-card-header>
+      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+      <mat-card-actions>
+          <div class="example-button-row">
+          <button mat-flat-button color="primary">JOIN</button>
+          <button mat-flat-button color="accent">SHARE</button>
+          </div>
+        </mat-card-actions>
+    </mat-card>
+  </div>
+<p><a [routerLink]="['/create']">Create</a></p>
+<p><a [routerLink]="['/login']">Logout</a></p>
